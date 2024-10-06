@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: circularStd_Bold;
+    src: url(./fonts/CircularStd-Bold.ttf);
+}
+@font-face {
+    font-family: circularStd_Book;
+    src: url(./fonts/CircularStd-Book.ttf);
+}
+.background {
+    background-image: linear-gradient(
+        to bottom,
+        rgb(255, 255, 255) 30%,
+        rgba(255, 255, 255, 0) 70%
+    ),
+        linear-gradient(to top, rgb(255, 255, 255) 10%, rgba(255, 255, 255, 0) 70%),
+        url("https://s3.pushplanet.com/users/2b24168f1ac448f5be0c8f3cacf8ae65/uploads/a29bce305cf04196a028fc615dedac6e/guidedHomeBG.png");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+.background__clip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.background__clip__area {
+    width: 100%;
+    height: 1300px;
+    background-color: #ff5500;
+    clip-path: polygon(88% 22%, 100% 22%, 100% 55%, 0 88%, 0 53%);
+    opacity: 0.8;
+    position: absolute;
+    z-index: -1;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+
+}
+
+.form{
+    width: 100%;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    margin-bottom: 80px;
+    border: 2px solid rgba(128, 128, 128, 0.283);
+    position: relative;
+    overflow: hidden;
+}
+.form__logo{
+    display: flex;
+    justify-content: center;
+}
+.form__logo img{
+    width: 210px;
+    margin-top: 83px;
+}
+.form__header{
+    text-align: center;
+    margin-bottom: 78px;
+}
+.form__header h1{
+    font-size: 44px;
+    color: #FE5F10;
+    margin-top: 38px;
+    font-family: circularStd_Bold;
+}
+.form__header p{
+    font-size: 22px;
+    color: #181818;
+    margin-top: 15px;
+    font-family: circularStd_Book;
+}
+.form__checkbox__group{
+    padding: 0px 90px;
+}
+.form__checkbox__group--single{
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #FE5F10;
+    border-color: #FE5F10;
+}
+
+input[type="checkbox"]:checked::before {
+    content: "✔";
+    position: absolute;
+    font-size: 16px;
+    color: white;
+    top: -1px;
+    left: 5px;
+}
+.form__checkbox__group--single label{
+    font-size: 24px;
+    color: rgb(24, 24, 24);
+    font-weight: bold;
+    font-family: circularStd_Bold;
+}
+.form__checkbox__group--single p{
+    margin-top: 8px;
+    font-size: 18px;
+    color: rgba(24, 24, 24, 0.7);
+    font-family: circularStd_Book;
+}
+
+.single__paragraph{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: circularStd_Book;
+}
+
+.form__button{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    
+}
+.form__button button{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 100px;
+    border-radius: 50px;
+    color: white;
+    background-color: #FE5F10;
+    border: 1px solid #FE5F10;
+    cursor: pointer;
+    z-index: 10;
+    margin-bottom: 250px;
+    font-family: circularStd_Bold;
+}
+.form__button button:hover{
+    border: 1px solid black;
+}
+.form__bottom__image{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@media (max-width: 1000px) {
+    .container{
+        padding: 0px 20px;
+    }
+    .form__header{
+        padding: 0px 20px;
+    }
+}
+
+@media (max-width: 568px) {
+    .container{
+        padding: 0px 20px;
+    }
+    .form__header{
+        padding: 0px 15px;
+    }
+    .form__logo img{
+        width: 150px;
+        margin-top: 50px;
+    }
+    .form__header{
+        margin-bottom: 50px;
+    }
+    .form__header h1{
+        font-size: 22px;
+        margin-top: 30px;
+    }
+    .form__header p{
+        font-size: 14px;
+        color: #181818;
+        margin-top: 15px;
+    }
+    .form__checkbox__group{
+        padding: 0px 20px;
+    }
+    .form__checkbox__group--single{
+        display: flex;
+        gap: 10px;
+        margin-top: 30px;
+    }
+    
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ccc;
+    }
+    
+    input[type="checkbox"]:checked {
+        background-color: #FE5F10;
+        border-color: #FE5F10;
+    }
+    
+    input[type="checkbox"]:checked::before {
+        content: "✔";
+        position: absolute;
+        font-size: 14px;
+        color: white;
+        top: -1px;
+        left: 3px;
+    }
+    .form__checkbox__group--single label{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .form__checkbox__group--single p{
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .single__paragraph{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .form__button{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        
+    }
+    .form__button button{
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 50px;
+        border-radius: 50px;
+        color: white;
+        background-color: #FE5F10;
+        border: 1px solid #FE5F10;
+        cursor: pointer;
+        z-index: 10;
+        margin-bottom: 250px;
+    }
+}
